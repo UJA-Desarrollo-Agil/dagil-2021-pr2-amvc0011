@@ -31,8 +31,8 @@ undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>EN TU HABITACIÓN</h1>\
         <p>Estás en tu habitación haciendo una fascinante práctica de la universidad de la asignatura Desarrollo Ágil.\
-        De repente, tu teléfono vibra. Y, aunque estás bastante entretenido programando, decides echar un vistazo a la notificación.\
-        ¡Increíble! Acabas de recibir un match en Tinder.</p><p> No utilizas esa app para nada, solo la instalaste porque pensabas que podrías\
+        De repente, tu teléfono vibra. Y, aunque estás bastante entretenido programando, decides echar un vistazo a la notificación.</p>\
+        <p>\¡Increíble! Acabas de recibir un match en Tinder.</p><p><img class='img-situation' src='./media/img/chicofascinado.jpg'></p><p> No utilizas esa app para nada, solo la instalaste porque pensabas que podrías\
          encontrarte a alguna de las chicas de la Isla de la Tentaciones (tal y como decía el anuncio de Tele 5).</p> \
          <p>Por desgracia, la que te ha dado el match no es ninguna de las de la Isla, pero al menos hace el apaño.\
           Un par de mensajes y consigues una <strong>cita con ella a las 7pm de esa misma tarde</strong>. Parece que la tía tiene \
@@ -56,6 +56,7 @@ undum.game.situations = {
     ),
     castigo: new undum.SimpleSituation(
         "<h1>FIN MALO :(</h1>\
+        <img class='img-situation' src='./media/img/tortazo.jpg'>\
         <p>¿En serio? ¿De verdad se te ocurre decirle eso a tu madre? \
         Tu mala cabeza te ha llevado a recibir un buen rascapolvo (con razón)\
         . Y ahí te ves en tu habitación: solo, sin torrijas y sin la única oportunidad\
@@ -102,8 +103,8 @@ undum.game.situations = {
         "<h1>Saliendo de casa</h1>\
         <p>Sales de casa. Tienes justo una hora para hacer la compra y poder llegar a tiempo a la cita.\
         El supermercado más cercano es definitivamente el Canglefúl y tienes dos opciones para ir: </p>\
-        <p><a href='./coche'>Coger tu Hyundai Coupe amarillo limón</a>, ponerte a escuchar la Tusa con el subwoofer al máximo y\
-        motivarte un poco a ti y, de paso, a todo el barrio.</p>\
+        <p><a href='./coche'>Coger tu Hyundai Coupe amarillo limón</a>, ponerte a escuchar la <a href='https://www.youtube.com/watch?v=tbneQDc2H3I&ab_channel=KarolGVEVO' class='raw' target='_new'>Tusa</a>con el subwoofer al máximo y\
+        motivarte un poco a ti y, de paso, a todo el barrio. <img class='img-situation' src='./media/img/coche.png'></p>\
          <p>También puedes <a href='./andando'>ir andando</a> porque aún sigues manteniendo tus instintos de runner.</p>",
         {
             actions:{
@@ -353,12 +354,12 @@ undum.game.situations = {
                 },
                 "harina":function(character,system,action){
                    // system.setQuality("ingrediente1",false);
-                  system.setCharacterText("<p>Un paquete de harina, podria ser util si no fuesen torrijas lo que me va a hacer mi madre</p>");
+                  system.setCharacterText("<p>Uhmmmm, no me es de utilidad.</p>");
                     
                 },
                 "levadura":function(character,system,action){
                     //system.setQuality("ingrediente1",false);
-                    system.setCharacterText("<p>Texto 2</p>");
+                    system.setCharacterText("<p>Tampoco voy a llevarmelo, no lo necesito para las torrijas</p>");
                   
                     
                 },
@@ -389,28 +390,29 @@ undum.game.situations = {
             actions:{
                 "nata":function(character,system,action){
                     system.setQuality("ingrediente1",false);
+                    system.setCharacterText("<p>Como hecho de menos comer fresas con nata... Deberia de pedirle a mi padre que compre en la fruteria.</p>");
                   
                     
                 },
                 "jamon":function(character,system,action){
                    // system.setQuality("ingrediente1",false);
-                  system.setCharacterText("<p>Un paquete de harina, podria ser util si no fuesen torrijas lo que me va a hacer mi madre</p>");
+                  system.setCharacterText("<p>Que pintaza tiene! Lástima que no tenga dinero... </p>");
                     
                 },
                 "pan":function(character,system,action){
                     //system.setQuality("ingrediente1",false);
-                    system.setCharacterText("<p>Texto 2</p>");
+                    system.setCharacterText("<p>Una barra de pan, espero que mi madre guardara la de ayer para hacer las torrijas.</p>");
                   
                     
                 },
                 "aceite":function(character,system,action){
                     system.setQuality("ingrediente4",false);
-                    system.setCharacterText("<p>Uno de los ingredientes que necesitaba, voy a tacharlo de la lista.</p>");
+                    system.setCharacterText("<p>No lo voy a necesitar, ya tenemos un cargamento en casa.</p>");
                     
                 },
                 "bebida":function(character,system,action){
                     system.setQuality("ingrediente5",false);
-                    system.setCharacterText("<p>Me resultara util, voy a meterlo en la cesta.</p>");
+                    system.setCharacterText("<p>!Que sed!. Voy a llevarmela</p>");
                     system.setQuality("total",character.qualities.total+3);
                     
                 }
@@ -440,7 +442,8 @@ undum.game.situations = {
                 },
                 "vainilla":function(character,system,action){
                     system.setQuality("ingrediente3",false);
-                  system.setCharacterText("<p>Un paquete de harina, podria ser util si no fuesen torrijas lo que me va a hacer mi madre</p>");
+                    system.setQuality("total",character.qualities.total+3);
+                 
                    
                 }
 
@@ -455,6 +458,7 @@ undum.game.situations = {
                    
                     system.write("<h1>PAGANDO</h1><p>Ya has terminado de hacer la compra y sales del super más derecho que un torero. Te <a href='vuelta'>diriges a casa</a> rápidamente\
                      para darle los ingredientes a tu madre y prepararte para ir a tu cita.</p>");
+                     system.setQuality("dinero",character.qualities.dinero-character.qualities.total);
                 }else{
                    
                     system.write("<h1>PAGANDO</h1> <p>Vaya, resulta que no tienes suficiente dinero para pagar todo lo que llevas. Te das cuenta de que la cola de la caja es más larga\
@@ -489,12 +493,12 @@ undum.game.situations = {
                     system.write("<h1>Llegada a casa</h1><p>Llegas a casa, le das a tu madre la bolsa de la compra y observa que están todos los ingredientes. \
                     Como has cumplido, te deja que salgas a donde quieras.</p> <p>Así que te pones una camisa animal print y te peinas al estilo Fermín Trujillo. Vas \
                     hecho todo un conquistador a tu <a href='cita'> cita</a>. ¡Date prisa porque vas con la hora justa!. Ya has hecho a una mujer feliz hoy, veremos a ver si consigues\
-                    el doblete con la chica.</p>")
+                    el doblete con la chica</p>")
                 }else{
                     system.write("<h1>Llegada a casa</h1><p>Llegas a casa, le das a tu madre la bolsa de la compra y observa que faltan algunos de los ingredientes que\
-                     te pidió. Por culpa de tu irresponsabilidad no podrá preparar las torrijas, así que te castiga sin salir </p>.\
+                     te pidió. Por culpa de tu irresponsabilidad no podrá preparar las torrijas, así que te castiga sin salir .</p>\
                     <p>Finalmente, te quedas encerrado en tu habitación, sin torrijas, dando plantón a la chica y perdiendo probablemente\
-                     la única oportunidad de encontrar al amor de tu vida</p>.\
+                     la única oportunidad de encontrar al amor de tu vida</p>\
                     </p>")
                 }
             }
@@ -636,4 +640,3 @@ undum.game.init = function(character, system) {
     
     
 };
-
