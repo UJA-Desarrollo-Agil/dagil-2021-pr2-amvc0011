@@ -104,7 +104,7 @@ undum.game.situations = {
         <p>Sales de casa. Tienes justo una hora para hacer la compra y poder llegar a tiempo a la cita.\
         El supermercado más cercano es definitivamente el Canglefúl y tienes dos opciones para ir: </p>\
         <p><a href='./coche'>Coger tu Hyundai Coupe amarillo limón</a>, ponerte a escuchar la <a href='https://www.youtube.com/watch?v=tbneQDc2H3I&ab_channel=KarolGVEVO' class='raw' target='_new'>Tusa</a>con el subwoofer al máximo y\
-        motivarte un poco a ti y, de paso, a todo el barrio. <img class='img-situation' src='./media/img/coche.png'></p>\
+        motivarte un poco a ti y, de paso, a todo el barrio. </p><p><img class='img-situation' src='./media/img/coche.png'></p>\
          <p>También puedes <a href='./andando'>ir andando</a> porque aún sigues manteniendo tus instintos de runner.</p>",
         {
             actions:{
@@ -359,7 +359,7 @@ undum.game.situations = {
                 },
                 "levadura":function(character,system,action){
                     //system.setQuality("ingrediente1",false);
-                    system.setCharacterText("<p>Tampoco voy a llevarmelo, no lo necesito para las torrijas</p>");
+                    system.setCharacterText("<p>Tampoco voy a llevármelo, no lo necesito para las torrijas</p>");
                   
                     
                 },
@@ -370,8 +370,8 @@ undum.game.situations = {
                     
                 },
                 "chicles":function(character,system,action){
-                   // system.setQuality("ingrediente5",false);
-                    system.setCharacterText("<p>Me resultara util, voy a meterlo en la cesta.</p>");
+                    system.setQuality("ingrediente5",false);
+                    system.setCharacterText("<p>Me resultará útil, voy a meterlo en la cesta.</p>");
                     system.setQuality("total",character.qualities.total+2);
                     
                 }
@@ -385,18 +385,18 @@ undum.game.situations = {
     pasillo2: new undum.SimpleSituation(
         "<h1>Pasillo 2</h1>\
         <p>En este pasillo puedes encontrar:<a class='once' href='./nata'> nata(2 euros)</a>, <a class='once' href='./jamon'>jamon de bellota(80 euros)</a>, <a class='once' href='./pan'>pan(1 euros)</a> y\
-         <a href='./aceite'>aceite de oliva virgen extra(7 euros)</a> y las <a class='once' href='./bebida'>bebidas isotonicas(3 euros)</a>\
+         <a class='once' href='./aceite'>aceite de oliva virgen extra(7 euros)</a> y las <a class='once' href='./bebida'>bebidas isotonicas(3 euros)</a>\
          Tambien puedes volver al <a href='supermercado'>pasillo pricipal</a></p>",{
             actions:{
                 "nata":function(character,system,action){
-                    //system.setQuality("ingrediente1",false);
-                    system.setCharacterText("<p>Como hecho de menos comer fresas con nata... Deberia de pedirle a mi padre que compre en la fruteria.</p>");
+                    system.setQuality("ingrediente1",false);
+                    system.setCharacterText("<p>¡Cómo echo de menos comer fresas con nata...! Debería de pedirle a mi padre que compre en la frutería.</p>");
                   
                     
                 },
                 "jamon":function(character,system,action){
                    // system.setQuality("ingrediente1",false);
-                  system.setCharacterText("<p>Que pintaza tiene! Lástima que no tenga dinero... </p>");
+                  system.setCharacterText("<p>¡Qué pintaza tiene! Lástima que no tenga dinero... </p>");
                     
                 },
                 "pan":function(character,system,action){
@@ -406,13 +406,13 @@ undum.game.situations = {
                     
                 },
                 "aceite":function(character,system,action){
-                    //system.setQuality("ingrediente4",false);
+                    system.setQuality("ingrediente4",false);
                     system.setCharacterText("<p>No lo voy a necesitar, ya tenemos un cargamento en casa.</p>");
                     
                 },
                 "bebida":function(character,system,action){
-                    //system.setQuality("ingrediente5",false);
-                    system.setCharacterText("<p>!Que sed!. Voy a llevarmela</p>");
+                    system.setQuality("ingrediente5",false);
+                    system.setCharacterText("<p>!Que sed!. Voy a llevármela</p>");
                     system.setQuality("total",character.qualities.total+3);
                     
                 }
@@ -454,7 +454,7 @@ undum.game.situations = {
         "<h1><h1>\
         ",{
             enter:function(character,system,from){
-                if((character.qualities.dinero-character.qualities.total) > 0){
+                if((character.qualities.dinero-character.qualities.total) >= 0){
                    
                     system.write("<h1>PAGANDO</h1><p>Ya has terminado de hacer la compra y sales del super más derecho que un torero. Te <a href='vuelta'>diriges a casa</a> rápidamente\
                      para darle los ingredientes a tu madre y prepararte para ir a tu cita.</p>");
@@ -520,16 +520,23 @@ undum.game.situations = {
                     Y si no llevara la mascarilla puesta te encantaría más. Te presentas y te sientas. No quieres que los nervios lo estropeen todo, pero es verdad que estás temblando más que un perro chico.\
                     Te pides un cortado (que si por ti fuera te pedirías ya la primera cerveza de la tarde, pero quieres causarle una buena impresión). Ella se pide un descafeinado.\
                     La gente que se pide descafeinados no son de fiar (eso salía en una película). Pero hoy se lo admites todo. Es perfecta. </p>\
-                    <p>La cita se te pasa volando y notas que  teneis buenas vibras por lo que decides que pedirle una <a href='./segundacita'>segunda cita</a> sería una buena idea.</p></h1>")
+                    <p>La cita se te pasa volando y notas que tenéis buenas vibras por lo que decides que pedirle una <a href='./segundacita'>segunda cita</a> sería una buena idea.</p></h1>")
             }
             },
             actions:{
                 "segundacita":function(character,system,action){
                     if( character.qualities.buenachon == true && character.qualities.amabilidad == true){
-                        system.write("<h1>FINAL FELIZ!!</h1><p>Vaya, parece que tambien le has gustado, se nota que no se ha podido resistir a ese look y esa personalidad.</p>")
+                        system.write("<h1>FINAL FELIZ!!</h1><p>La chica te ha dicho que hay feeling entre vosotros. En el programa de First Dates cuando dicen eso es que la relación promete.\
+                        Parece que tus habilidades de pícaro de playa la han engatusado. Aunque ya ni te acordabas de la última cita que tuviste, lo de que te has empotrado a más de 1500\
+                        mujeres lo saben en todo el pueblo. No le haces asco a nada porque ya te decía tu madre que hay que comer de todo. Así que os intercambiáis los whatsapps y vuelves\
+                        a tu casa más contento que MacGyver en una ferretería. Encima seguro que tu madre ya te tiene preparadas las torrijas. Un día de 10: ¡felicidades, campeón!. \
+                        </p>")
                     }else{
-                        system.write("<h1>SIN AMOR PERO CON EL ESTOMAGO LLENO!</h1><p>Oh dios, parece ser que no ha sido reciproco y no quiere seguir quedando contigo. Bueno, te volveras sin amor, pero al menos te esperan unas torrijas que ya quisiera mas de \
-                        uno probarlas.</p>")
+                        system.write("<h1>SIN AMOR PERO CON EL ESTÓMAGO LLENO!</h1><p>La cita termina y le pides el whatsapp para seguir estando en contacto. Pero te da la sensación de\
+                        que te está poniendo excusas: dice que su internet de Pacophone no llega bien y que seguramente no podrá ver tus mensajes, encima resulta que está en contra del\
+                        uso de las redes sociales. Le pides su dirección porque lo de escribirse cartas al estilo Cuéntame Cómo Pasó también tiene su morbo. Pero resulta que vive en una\
+                        caravana y viaja mucho. Cabe la posibilidad de que no le hayas gustado. Definitivamente no le has gustado. </p>\
+                        <p>En fin, vuelves a casa un poco deprimido, pero todas las penas te las van a curar las torrijas de tu madre. </p>")
                     }
                 }
             }
@@ -640,3 +647,4 @@ undum.game.init = function(character, system) {
     
     
 };
+
