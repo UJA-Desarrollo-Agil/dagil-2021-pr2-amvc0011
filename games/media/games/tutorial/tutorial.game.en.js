@@ -370,7 +370,7 @@ undum.game.situations = {
                     
                 },
                 "chicles":function(character,system,action){
-                    system.setQuality("ingrediente5",false);
+                   // system.setQuality("ingrediente5",false);
                     system.setCharacterText("<p>Me resultara util, voy a meterlo en la cesta.</p>");
                     system.setQuality("total",character.qualities.total+2);
                     
@@ -389,7 +389,7 @@ undum.game.situations = {
          Tambien puedes volver al <a href='supermercado'>pasillo pricipal</a></p>",{
             actions:{
                 "nata":function(character,system,action){
-                    system.setQuality("ingrediente1",false);
+                    //system.setQuality("ingrediente1",false);
                     system.setCharacterText("<p>Como hecho de menos comer fresas con nata... Deberia de pedirle a mi padre que compre en la fruteria.</p>");
                   
                     
@@ -406,12 +406,12 @@ undum.game.situations = {
                     
                 },
                 "aceite":function(character,system,action){
-                    system.setQuality("ingrediente4",false);
+                    //system.setQuality("ingrediente4",false);
                     system.setCharacterText("<p>No lo voy a necesitar, ya tenemos un cargamento en casa.</p>");
                     
                 },
                 "bebida":function(character,system,action){
-                    system.setQuality("ingrediente5",false);
+                    //system.setQuality("ingrediente5",false);
                     system.setCharacterText("<p>!Que sed!. Voy a llevarmela</p>");
                     system.setQuality("total",character.qualities.total+3);
                     
