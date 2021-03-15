@@ -16,11 +16,15 @@ https://trello.com/b/FiMieo2Q/pr%C3%A1ctica-2
 
 
 ## Capturas de pantalla de Trello
-![f1](https://user-images.githubusercontent.com/78795146/111158798-c1549080-8598-11eb-8656-7ec3f64417d6.png)
-![f2](https://user-images.githubusercontent.com/78795146/111158806-c285bd80-8598-11eb-80da-a179812fd4ed.png)
-![f3](https://user-images.githubusercontent.com/78795146/111158811-c3b6ea80-8598-11eb-9bf8-410114c832b4.png)
+![f1](https://user-images.githubusercontent.com/78795146/111159802-c534e280-8599-11eb-89f0-bc4e2fca6d1d.png)
+![f2](https://user-images.githubusercontent.com/78795146/111159806-c6660f80-8599-11eb-99b3-21184156c092.png)
+![f3](https://user-images.githubusercontent.com/78795146/111159808-c6660f80-8599-11eb-8b99-b324a06554fb.png)
+
+
 
 
 ## Capturas de pantalla de Telegram
+![telegram2](https://user-images.githubusercontent.com/78795146/111160260-383e5900-859a-11eb-9788-89c565cce9bb.png)
+![te1](https://user-images.githubusercontent.com/78795146/111160263-38d6ef80-859a-11eb-8ac3-37e444cd88b2.png)
 
 
