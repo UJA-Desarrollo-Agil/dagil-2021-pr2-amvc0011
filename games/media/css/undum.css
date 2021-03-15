@@ -355,3 +355,39 @@ img.float_left {
 #menu {
     display: none;
 }
+
+
+
+
+/*Modificaciones propias para mi diseño*/
+/*
+body {
+    background: #170804 url("../img/text_bg.jpg") repeat-x left top;
+    font-family: Palatino, Times, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.6em;
+    background-attachment: fixed;
+    overflow-y: scroll;
+}
+#title .label {
+    overflow: hidden;
+    background: #f8f801 url("../img/fondo.jpg") repeat left top;
+    padding: 2.0em;
+    margin: auto;
+    max-width: 18em;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.4);
+            box-shadow: 0 0 4px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+#content_wrapper {
+    max-width: 28em;
+    position: relative;
+    background: #e6e6c6 url("../img/fondo.jpg") repeat left top;
+    margin: 0.6em auto 1.1em auto;
+    padding: 2.8em;
+    display: none; 
+    overflow: auto;
+}
+*/
+
