@@ -403,6 +403,13 @@
     IntegerQuality.prototype.format = function(character, value) {
         return Math.floor(value).toString();
     };
+    var IntegerQualityB = function(title, opts) {
+        QualityDefinition.call(this, title, opts);
+    };
+    IntegerQualityB.inherits(QualityDefinition);
+    IntegerQualityB.prototype.format = function(character, value) {
+        return null;
+    };
 
     /* A quality that displays as an IntegerQuality, unless it is
      * zero, when it is omitted. Options (in the opts * parameter) are
@@ -1827,6 +1834,7 @@
 
         QualityDefinition: QualityDefinition,
         IntegerQuality: IntegerQuality,
+        IntegerQualityB: IntegerQualityB,
         NonZeroIntegerQuality: NonZeroIntegerQuality,
         NumericQuality: NumericQuality,
         WordScaleQuality: WordScaleQuality,
