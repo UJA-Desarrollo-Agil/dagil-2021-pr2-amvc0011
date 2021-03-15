@@ -1,3 +1,4 @@
+
 # UNA COMPRA A CONTRARRELOJ
 
 ## Descripción del juego
@@ -19,6 +20,7 @@ https://trello.com/b/FiMieo2Q/pr%C3%A1ctica-2
 ![f1](https://user-images.githubusercontent.com/78795146/111159802-c534e280-8599-11eb-89f0-bc4e2fca6d1d.png)
 ![f2](https://user-images.githubusercontent.com/78795146/111159806-c6660f80-8599-11eb-99b3-21184156c092.png)
 ![f3](https://user-images.githubusercontent.com/78795146/111159808-c6660f80-8599-11eb-8b99-b324a06554fb.png)
+![as](https://user-images.githubusercontent.com/78795146/111203493-61281380-85c5-11eb-9304-67888e390f50.png)
 
 
 
