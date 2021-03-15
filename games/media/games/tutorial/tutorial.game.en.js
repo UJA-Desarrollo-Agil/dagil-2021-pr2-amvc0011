@@ -55,18 +55,20 @@ undum.game.situations = {
           }
     ),
     castigo: new undum.SimpleSituation(
-        "<h1>Castigo</h1>\
+        "<h1>FIN MALO :(</h1>\
         <p>¿En serio? ¿De verdad se te ocurre decirle eso a tu madre? \
         Tu mala cabeza te ha llevado a recibir un buen rascapolvo (con razón)\
         . Y ahí te ves en tu habitación: solo, sin torrijas y sin la única oportunidad\
         de estar con una chica en años. Y encima te has ganado tal hostia que te van a\
         tener que dar el betadine con rodillo. Así que aquí termina tu historia. Continúa\
         estudiando para conseguir un buen trabajo y pagarte las torrijas en el futuro porque\
-        las de tu madre no las volverás a oler. </p>",
+        las de tu madre no las volverás a oler. </p>\
+        <p>Puedes <a href='start'>intentarlo de nuevo</p>",
         {
            
         }
     ),
+    
    
     educado:new undum.SimpleSituation(
         "<h1>Preparandose para ir a comprar</h1>\
@@ -504,14 +506,28 @@ undum.game.situations = {
         ",{
             enter:function(character,system,from){
                 if(character.qualities.hora >= 19 && character.qualities.minutos >0){
-                    system.write("<h1>Cita</h1><p>Has llegao tarde</p>");
+                    system.write("<h1>HAS LLEGADO TARDE</h1><p>Patético. Quedas con una chica por primera vez y lo más destacable es tu impuntualidad. ¿Te pensabas que alguien que conoces\
+                    por una app te iba a esperar indefinidamente hasta que a ti te diera la gana de aparecer? Pues no, amigo. Seguro que ya te ha sustituido por otro de sus treinta match.\
+                    Menos mal que Tinder no es el TripAdvisor del amor, sino te habrías llevado una mala recomendación (y las visitas a tu corazón ya de por sí brillan por su ausencia).\
+                    Seguro que esta noche no llegas tarde a la partida de Fortnite con los colegas…</p>");
                 }else{
-                if(character.qualities.buenachon == true &&character.qualities.amabilidad == true){
-                    system.write("<h1>Cita</h1><p>Puedes pedir 2 cita o volver a casa</p>");
-                }else{
-                    system.write("<h1>Cita</h1><p>Solo volver a casa</p>");
-                }
+                    system.write("<h1>Cita</h1><p>  Llegas a la cafetería donde habíais quedado. Buscas en tu móvil el perfil de la chica en Tinder para verificar la foto y no meter la pata. \
+                    Quieres que todo salga perfecto. Ahí está. Tiene una rubia y sedosa melena como la de Letizia Sabater y una mirada profunda como la de Rossy de Palma. Te encanta.\
+                    Y si no llevara la mascarilla puesta te encantaría más. Te presentas y te sientas. No quieres que los nervios lo estropeen todo, pero es verdad que estás temblando más que un perro chico.\
+                    Te pides un cortado (que si por ti fuera te pedirías ya la primera cerveza de la tarde, pero quieres causarle una buena impresión). Ella se pide un descafeinado.\
+                    La gente que se pide descafeinados no son de fiar (eso salía en una película). Pero hoy se lo admites todo. Es perfecta. </p>\
+                    <p>La cita se te pasa volando y notas que  teneis buenas vibras por lo que decides que pedirle una <a href='./segundacita'>segunda cita</a> sería una buena idea.</p></h1>")
             }
+            },
+            actions:{
+                "segundacita":function(character,system,action){
+                    if( character.qualities.buenachon == true && character.qualities.amabilidad == true){
+                        system.write("<h1>FINAL FELIZ!!</h1><p>Vaya, parece que tambien le has gustado, se nota que no se ha podido resistir a ese look y esa personalidad.</p>")
+                    }else{
+                        system.write("<h1>SIN AMOR PERO CON EL ESTOMAGO LLENO!</h1><p>Oh dios, parece ser que no ha sido reciproco y no quiere seguir quedando contigo. Bueno, te volveras sin amor, pero al menos te esperan unas torrijas que ya quisiera mas de \
+                        uno probarlas.</p>")
+                    }
+                }
             }
         }
     ),
